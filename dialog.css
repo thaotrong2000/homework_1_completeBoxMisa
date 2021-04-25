@@ -1,0 +1,291 @@
+#dialog-opacity {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+#dialog-content {
+  position: fixed;
+  background-color: #f4f4f4;
+  width: 750px;
+  height: 620px;
+  top: calc(50% - 310px);
+  left: calc(50% - 375px);
+  padding: 10px 15px 10px 18px;
+  border-radius: 5px;
+}
+
+/* Tao dialog Header */
+
+.dialog-header {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog-header button {
+  width: 18px;
+  height: 18px;
+  background-image: url("../../assets/icon/x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  outline: none;
+  margin-top: -13px;
+  cursor: pointer;
+}
+
+.dialog-header div {
+  font-family: GoogleSans-Regular;
+  font-size: 18px;
+  margin-top: -5px;
+}
+
+/* Tao dialog content */
+.dialog-content {
+  position: absolute;
+  top: 50px;
+  left: 18px;
+  right: 15px;
+  bottom: 50px;
+  background-color: #f4f4f4;
+}
+
+.dialog-content .dialog-content-ava {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+}
+
+.dialog-content-ava .dialog-ava {
+  width: 150px;
+  height: 150px;
+  background-image: url("../../assets/img/default-avatar.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 50%;
+}
+.dialog-content-ava .dialog-ava-text {
+  text-align: center;
+  font-family: GoogleSans-Regular;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.dialog-content .dialog-content-main {
+  position: absolute;
+  left: 150px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-left: 20px;
+}
+
+.dialog-content-main .dialog-information {
+  display: flex;
+}
+
+/* Tao CSS for input button */
+.dialog-information input {
+  width: 250px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.dialog-information select {
+  width: 250px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding-left: 15px;
+}
+
+.dialog-information .dialog-input-label:first-child {
+  margin-right: 20px;
+}
+
+.dialog-content-main hr {
+  width: 70px;
+  height: 4px;
+  background-color: #019160;
+  border: none;
+  margin-bottom: 6px;
+}
+
+/* css for common */
+
+.dialog-content-main .dialog-common {
+  font-family: GoogleSans-Regular;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.dialog-input-label .dialog-input-text {
+  margin-bottom: 3px;
+  font-family: GoogleSans-Regular;
+  font-size: 13.5px;
+  font-weight: 300;
+}
+
+.dialog-input-label input {
+  margin-bottom: 5px;
+}
+
+.dialog-information-last input {
+  margin-bottom: 5px;
+}
+
+.dialog-input-text span {
+  color: #ff4747;
+}
+
+/* Tao Footer */
+.dialog-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45px;
+  background-color: #d2d2d2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.dialog-delete-employee {
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.dialog-delete-employee:hover,
+.dialog-delete-employee:focus {
+  background-color: #ff4747;
+  color: #ffffff;
+}
+.dialog-cancel-delete {
+  display: flex;
+}
+
+/* Tao button save and cacel trong dialog */
+
+.dialog-button-change {
+  height: 34px;
+  width: 90px;
+  line-height: 34px;
+  text-align: center;
+  font-family: GoogleSans-Regular;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.dialog-button-change .dialog-save-icon {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../assets/icon/save.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.dialog-footer .dialog-button-change:last-child {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.dialog-footer .dialog-save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01b075;
+  border-radius: 3px;
+}
+/* Tao button save */
+.dialog-footer .dialog-save:hover,
+.dialog-save:focus {
+  background-color: #019160;
+  color: #ffffff;
+}
+
+/* Tao button cancel */
+
+.dialog-footer .dialog-cacel:hover,
+.dialog-cacel:focus {
+  background-color: #ff4747;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+#input-gender {
+  display: flex;
+  background-color: #ffffff;
+  height: 30px;
+  border-radius: 3px;
+  border: 0.1px solid #ccc;
+}
+
+#input-gender input {
+  width: 220px;
+  border: none;
+  border-radius: 0px;
+}
+
+#input-gender span {
+  width: 30px;
+  height: 30px;
+}
+
+#input-gender span {
+  background-image: url(./assets/icon/br_down.webp);
+  background-size: 12px 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#gender-name {
+  position: relative;
+}
+
+#gender-name #gender-select {
+  position: absolute;
+  display: none;
+}
+
+#gender-select div {
+  width: 250px;
+  background-color: #ffffff;
+}
+
+#input-gender input {
+  height: 28px;
+  outline: none;
+}
+
+#gender-select div{
+  height: 35px;
+  padding-left: 35px;
+  line-height: 35px;
+}
+
+#gender-select div:hover{
+  background-color: #ccc;
+}

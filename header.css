@@ -1,0 +1,67 @@
+#header{
+    position: absolute;
+    top: 0;
+    left: 200px; 
+    right: 0;
+    height: 48px;
+    background-color: #ababab;
+    padding: 12px 30px 12px 30px;
+    display: flex; 
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Phan hien thi ten nha hang */
+#header-name{
+    display: flex;
+    justify-content: center;
+}
+#header-name-text{
+    font-family: GoogleSans-Medium;
+    line-height: 24px;
+    font-size: 15px;
+}
+#header-name-drop{
+    width: 18px; 
+    height: 18px; 
+    background-image: url("./assets/icon/btn-next-page.svg"); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(90deg);
+    margin-left: 10px;
+    background-position-x: 3px;
+}
+
+/* Hien thi thong tin nguoi dung dang nhap */
+
+#header-infor{
+    display: flex;
+    align-items: center;
+}
+
+ #header-infor-image{
+     width: 30px; 
+     height: 30px;
+     background-image: url("./assets/icon/avatar-default.png");
+     background-repeat: no-repeat;
+     background-size: contain; 
+     margin-right: 16px;
+ }
+
+ #header-infor-name{
+     font-family: GoogleSans-Regular;
+     font-size: 13px;
+ }
+
+ #header-infor-system{
+    width: 16px; 
+    height: 16px;
+    background-image: url("./assets/icon/option.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 16px;
+
+}
+
+

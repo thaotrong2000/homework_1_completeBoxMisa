@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./common/common.css">
+
+    <link rel="stylesheet" href="./common/font.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./content.css">
+    <link rel="stylesheet" href="./dialog.css">
+    <link rel="stylesheet" href="./common/button-function.css">
+    <link rel="stylesheet" href="./common/button-search.css">
+</head>
+
+<body>
+    <!-- Tạo Navbar -->
+
+    <div id="navbar">
+        <!-- Tao logo -->
+        <div id="navbar-logo">
+            <!-- Tao bieu tuong dieu huong -->
+            <div id="navbar-direction"></div>
+
+            <!-- Tao Logo -->
+            <div id="navbar-logo-misa"></div>
+        </div>
+
+        <!-- Tao thanh Menu -->
+        <div id="navbar-menu">
+            <a class="btn-menu btn-menu-dashboard" to="/dashboard">
+                <div class="btn-menu-icon btn-dashboard"></div>
+                <div class="btn-menu-text ">Tổng quan</div>
+            </a>
+
+            <a class="btn-menu btn-menu-report" to="/report">
+                <div class="btn-menu-icon btn-report"></div>
+                <div class="btn-menu-text ">Báo cáo</div>
+            </a>
+
+            <a class="btn-menu btn-menu-buy" to="/buy">
+                <div class="btn-menu-icon btn-buy"></div>
+                <div class="btn-menu-text ">Mua hàng</div>
+            </a>
+            <a class="btn-menu btn-menu-employee" to="/employee">
+                <div class="btn-menu-icon btn-employee"></div>
+                <div class="btn-menu-text ">Danh mục nhân viên</div>
+            </a>
+
+            <a class="btn-menu btn-menu-customer" to="/customer">
+                <div class="btn-menu-icon btn-employee"></div>
+                <div class="btn-menu-text ">Danh mục khách hàng</div>
+            </a>
+
+            <a class="btn-menu btn-menu-system" to="/system">
+                <div class="btn-menu-icon btn-system"></div>
+                <div class="btn-menu-text ">Thiết lập hệ thống</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Tạo Header -->
+    <div id="header">
+        <!-- Hien thi ten nha hang -->
+        <div id="header-name">
+            <div id="header-name-text">Nhà hàng Biển Đông</div>
+            <div id="header-name-drop"></div>
+        </div>
+
+        <!-- Hien thi thong tin nguoi dang nhap -->
+        <div id="header-infor">
+            <div id="header-infor-image"></div>
+            <div id="header-infor-name">Nguyễn Trọng Thảo</div>
+            <div id="header-infor-system"></div>
+        </div>
+    </div>
+
+
+    <!-- Tạo Content -->
+    <div id="content">
+        <div id="content-title">
+            <!-- Phan dau cua content -->
+            <div id="content-list-customer">Danh sách nhân viên</div>
+            <button id="btn-add" class="button-function" @click="isShowDialog()">
+                <div id="btn-add-icon"></div>
+                <div id="btn-add-text">Thêm nhân viên</div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Tạo Dialog -->
+
+    <div id="dialog">
+        <div id="dialog-opacity"></div>
+        <div id="dialog-content">
+            <div class="dialog-header">
+                <div>Thông tin nhân viên</div>
+                <button></button>
+            </div>
+            <div class="dialog-content">
+                <div class="dialog-content-ava">
+                    <div class="dialog-ava"></div>
+                    <div class="dialog-ava-text">
+                        (Vui lòng chọn ảnh có định dạng .jpq .jpeg .png .gif.)
+                    </div>
+                </div>
+                <div class="dialog-content-main">
+                    <!-- Common first -->
+                    <div class="dialog-common">
+                        A. THÔNG TIN CHUNG:
+                    </div>
+
+                    <hr />
+
+                    <!-- Tao thong tin o dong 1 -->
+
+                    <!-- Left -->
+                    <div class="dialog-information">
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Mã nhân viên(<span>*</span>)</div>
+                            <input />
+                        </div>
+                        <!-- Right -->
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Họ và tên(<span>*</span>)</div>
+                            <input type="text" class="dialog-input" />
+                        </div>
+                    </div>
+
+                    <!-- Tao thong tin dong thu 2 -->
+                    <div class="dialog-information">
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Ngày sinh</div>
+                            <input type="date" class="dialog-input" />
+                        </div>
+                        <!-- Right -->
+                        <div class="dialog-input-label" id="gender-name">
+                            <div class="dialog-input-text">Giới tính</div>
+                            <div id="input-gender" class="dialog-input">
+                                <input type="text" id="value-gender">
+                                <span></span>
+                            </div>
+                            <div id="gender-select">
+                                <div>Nam</div>
+                                <div>Nữ</div>
+                                <div>Giới tính khác</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Tao thong tin dong thu 3 -->
+                    <div class="dialog-information">
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">
+                                Số CMTNHD/ Căn cước(<span>*</span>)
+                            </div>
+                            <input type="text" class="dialog-input" />
+                        </div>
+                        <!-- Right -->
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Ngày cấp</div>
+                            <input type="date" class="dialog-input" />
+                        </div>
+                    </div>
+
+                    <!-- Tao thong tin dong thu 4 -->
+                    <div class="dialog-information">
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Nơi cấp</div>
+                            <input type="text" class="dialog-input" />
+                        </div>
+                        <!-- Right -->
+                        <!-- <div class="dialog-input-label">
+                  <div class="dialog-input-text">Mã nhân viên(<span>*</span>)</div>
+                  <input type="text" class="dialog-input" />
+                </div> -->
+                    </div>
+
+                    <!-- Tao thong tin dong thu 5 -->
+                    <div class="dialog-information dialog-information-last">
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Email<span>(*)</span></div>
+                            <input type="text" placeholder="misa@company" class="dialog-input" />
+                        </div>
+                        <!-- Right -->
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Số điện thoại(<span>*</span>)</div>
+                            <input type="text" class="dialog-input" />
+                        </div>
+                    </div>
+
+                    <div class="dialog-common">
+                        B. THÔNG TIN CÔNG VIỆC:
+                    </div>
+
+                    <hr />
+
+                    <!-- Tao thong tin o dong 1 -->
+
+                    <!-- Left -->
+                    <div class="dialog-information">
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Vị trí</div>
+                            <!-- <input
+                    type="text"
+                    class="dialog-input"
+                    v-model="employeeGet.PositionCode"
+                  /> -->
+                            <select class="dialog-input" v-model="employeeGet.PositionId">
+                                <option value="employee-marketing">Nhân viên Marketting</option>
+                                <option value="employee-director">Giám đốc</option>
+                                <option value="employee-money">Thu ngân</option>
+                            </select>
+
+                        </div>
+                        <!-- Right -->
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Phòng ban</div>
+                            <!-- <input
+                    type="text"
+                    class="dialog-input"
+                    v-model="employeeGet.DepartmentCode"
+                  /> -->
+                            <!-- <input
+                    type="text"
+                    class="dialog-input"
+                    v-model="employeeGet.DepartmentId"
+                  /> -->
+
+                            <select class="dialog-input" v-model="employeeGet.DepartmentId">
+                                <option value="technology">Phòng công nghệ</option>
+                                <option value="training">Phòng đào tạo</option>
+                                <option value="human-resoure">Phòng nhân sự</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Tao thong tin dong thu 2 -->
+                    <div class="dialog-information">
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Mã số thuế cá nhân</div>
+                            <input type="text" class="dialog-input" />
+                        </div>
+                        <!-- Right -->
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Mức lương cơ bản</div>
+                            <input type="text" class="dialog-input" />
+                        </div>
+                    </div>
+
+                    <!-- Tao thong tin dong thu 3 -->
+                    <div class="dialog-information">
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Ngày gia nhập công ty</div>
+                            <input type="date" class="dialog-input" />
+                        </div>
+                        <!-- Right -->
+                        <div class="dialog-input-label">
+                            <div class="dialog-input-text">Tình trạng công việc</div>
+                            <input type="text" class="dialog-input" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Common detail -->
+
+            <!-- Tao Footer -->
+            <div class="dialog-footer">
+                <button class="dialog-delete-employee dialog-button-change" :disabled="btnDelete">
+                    Xóa
+                </button>
+                <div class="dialog-cancel-delete">
+                    <div class="dialog-cacel dialog-button-change">
+                        Hủy
+                    </div>
+                    <div class="dialog-save dialog-button-change">
+                        <div class="dialog-save-icon"></div>
+                        <div class="dialog-save-text">Lưu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./library/jquery-3.6.0.min.js"></script>
+    <script src="complete-box.js"></script>
+</body>
+
+</html>

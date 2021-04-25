@@ -1,0 +1,21 @@
+.button-function{
+    display: flex;
+    height: 36px;
+    padding-left: 10px; 
+    padding-right: 10px;
+    align-items: center;
+    border: none; 
+    outline: none;
+    background-color: #01B075;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 13px; 
+    font-family: GoogleSans-Regular;
+}
+
+.button-function:hover{
+    background-color: #019160;
+}
+.button-function:focus{
+    background-color: #019160;
+}

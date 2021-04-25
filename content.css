@@ -1,0 +1,256 @@
+#content{
+    position: absolute; 
+    top: 48px; 
+    left: 200px; 
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f4;
+    padding: 16px 20px 0 16px;
+
+}
+
+/* content header {Danh sach nhan vien, button: Add} */
+
+#content-title{
+    display: flex;
+    justify-content: space-between;
+}
+#content-list-customer{
+    font-family: GoogleSans-Medium;
+    font-size: 18px;
+    font-weight: 550;
+    line-height: 36px;
+}
+
+/* Tao btn Add Employee */
+
+#btn-add{
+    cursor: pointer;
+}
+
+#btn-add-icon{
+    width: 16px; 
+    height: 16px;
+    background-image: url("./assets/icon/add.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 8px;
+    
+}
+
+
+/* Tao Content Navbar */
+#content-navbar{
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 4px;
+
+}
+
+.content-navbar-search{
+}
+
+.content-navbar-search .button-search{
+    border: none;
+    outline: none;
+    height: 34px;
+    line-height: 34px;
+    background-color: #f4f4f4;
+}
+.content-navbar-search .content-navbar-btnsearch{
+    width: 16px; 
+    height: 16px; 
+    background-image: url("./assets/icon/search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.content-navbar-search > input{
+    background-color: #f4f4f4;
+    margin-left: 8px;
+    font-size: 11px;
+    width: 210px;
+}
+
+
+.content-filter{
+    display: flex;
+}
+
+.content-navbar-department{
+    width: 170px;
+    margin-left: 8px;
+}
+
+.content-navbar-all{
+    width: 170px;
+    margin-left: 20px;
+}
+
+#content-navbar-reload{
+    height: 36px; 
+    width: 36px;
+    background-image: url("./assets/icon/refresh.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Tao noi dung cho bang Table */
+
+#table{
+    height: calc(100vh - 196px);
+    position: absolute; 
+    bottom: 56px;
+    left: 16px;
+    right: 20px;
+    overflow: scroll; 
+}
+
+#content-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Tao chuc nang Sticky de dinh tieu de Table */
+#content-table tr th{
+    position: sticky; 
+    top: 0;
+    background-color: #f4f4f4;
+
+}
+
+#content-table tr{
+    height: 48px;
+    
+}
+
+
+
+#content table th,td{
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px; 
+    padding-right: 8px;
+    
+
+}
+
+#content-table th{
+    font-family: GoogleSans-Medium; 
+    font-size: 14px; 
+}
+
+#content-table td{
+    font-family: GoogleSans-Regular; 
+    font-size: 13px;
+}
+
+
+
+/* Tao footer */
+
+#footer{
+    position: absolute; 
+    height: 56px;
+    bottom: 0;
+    left: 16px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    align-items: center;
+}
+
+#footer-title,#footer-infor{
+    font-family: GoogleSans-Regular;
+    font-size: 12px;
+}
+
+.footer-title-numberlist{
+    font-family: GoogleSans-Medium;
+    font-weight: 600;
+}
+
+/* Tao thanh dieu huong trang web */
+#footer-paging{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Di chuyen ve trang truoc */
+.icon-pre-page{
+    display: flex;
+}
+
+.icon-pre-page .icon-first-page{
+    width: 20px; 
+    height: 20px; 
+    background-image: url("./assets/icon/btn-firstpage.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;   
+}
+
+.icon-pre-page .icon-prev-page{
+    width: 20px; 
+    height: 20px; 
+    background-image: url("./assets/icon/btn-prev-page.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;   
+}
+
+/* Tao phan chon trang */
+.icon-number-page .number-page{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.icon-number-page .number-page:hover{
+    border: none;
+    background-color: #DADCE0;
+}
+
+.icon-number-page .number-page:focus{
+    border: none;
+    background-color: #019160;
+    color: #ffffff;
+}
+.icon-number-page .number-page:last-child{
+    margin-right: 0;
+    
+}
+
+/* Tao next trang */
+
+.icon-next-page{
+    display: flex;
+}
+
+.icon-next-page .icon-next-topage{
+    width: 20px; 
+    height: 20px; 
+    background-image: url("./assets/icon/btn-next-page.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;   
+}
+
+.icon-next-page .icon-last-page{
+    width: 20px; 
+    height: 20px; 
+    background-image: url("./assets/icon/btn-lastpage.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;   
+}
