@@ -43,7 +43,6 @@ $(document).ready(function () {
                     count_check_gender++;
                 }
             }
-            console.log(count_check_gender);
 
             if (count_check_gender == 0) {
                 $("#input-gender").css("border-color", "red");
@@ -71,7 +70,31 @@ $(document).ready(function () {
     // Khi click vào biểu tượng, sẽ hiện ra các lựa chọn cho người dùng
 
     $("#input-gender span").on("click", function () {
-        $("#gender-select").css("display", "block");
+        // $("#gender-select").css("display", "block");
+        // Xử lý dữ liệu đã được chọn
+
+        
+        var selected_data = $("#value-gender").val();
+
+        var index_gender = $("#gender-select div");
+        for (var count_gender = 0; count_gender < index_gender.length; count_gender++) {
+            index_gender[count_gender].style.backgroundColor = "#ffffff";
+            index_gender[count_gender].style.color = "#000000";
+        }
+        for (var count_gender = 0; count_gender < index_gender.length; count_gender++) {
+            var value_gender = index_gender[count_gender].textContent;
+            if (selected_data == value_gender) {
+                index_gender[count_gender].style.backgroundColor = "#01b075";
+                index_gender[count_gender].style.color = "#ffffff";
+            }
+
+        }
+
+
+
+
+        // Xử lý dữ liệu 
+        $("#gender-select").toggle();
         $("#input-gender").css("border-color", "#019160");
         var number_gender = $("#gender-select div");
         var i;
