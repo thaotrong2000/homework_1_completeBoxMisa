@@ -1,5 +1,25 @@
 $(document).ready(function () {
     // Kiểm tra xem dữ liệu có trống không
+    // 3) Giới tính:
+    
+    $("#value-gender").keyup(function () { 
+        if($(this).val() == ""){
+            $(this).closest("div").css("border", "1px solid red");
+        }
+        else{
+            $(this).closest("div").css("border", "1px solid #ccc");
+        }
+    });
+    // 2-b) Check Blur: 
+    $("#value-gender").blur(function () { 
+        if($(this).val() == ""){
+            $(this).closest("div").css("border", "1px solid red");
+        }
+        else{
+            $(this).closest("div").css("border", "1px solid #ccc");
+        }
+        
+    });
 
     // Lọc dữ liệu theo tên nhập vào 
     $("#input-gender input").keyup(function () {
@@ -110,5 +130,49 @@ $(document).ready(function () {
         });
 
     });
+
+    // Check dữ liệu bắt buộc phải nhập
+    // 1) Mã nhân viên: 
+    $("#input-employeeId").keyup(function () { 
+        if($(this).val() == ""){
+            $(this).css("border", "1px solid red");
+        }
+        else{
+            $(this).css("border", "1px solid #ccc");
+        }
+    });
+
+    // 1-b) Check Blur: 
+    $("#input-employeeId").blur(function () { 
+        if($(this).val() == ""){
+            $(this).css("border", "1px solid red");
+        }
+        else{
+            $(this).css("border", "1px solid #ccc");
+        }
+        
+    });
+    
+    // 2) Tên nhân viên
+    $("#input-employeeName").keyup(function () { 
+        if($(this).val() == ""){
+            $(this).css("border", "1px solid red");
+        }
+        else{
+            $(this).css("border", "1px solid #ccc");
+        }
+    });
+    // 2-b) Check Blur: 
+    $("#input-employeeName").blur(function () { 
+        if($(this).val() == ""){
+            $(this).css("border", "1px solid red");
+        }
+        else{
+            $(this).css("border", "1px solid #ccc");
+        }
+        
+    });
+
+    
 
 })
